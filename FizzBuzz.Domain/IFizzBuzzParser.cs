@@ -2,7 +2,8 @@
 
 namespace FizzBuzz.Domain
 {
-    public class Class1
+    public interface IFizzBuzzParser
     {
+      string Parse(int n);
     }
 }
