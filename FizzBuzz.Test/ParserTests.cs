@@ -3,12 +3,12 @@ using Xunit;
 
 namespace FizzBuzz.Test
 {
-    public class UnitTest1
+    public class ParserTests
     {
         [Fact]
         public void Test1()
         {
-
+          Assert.True(false);
         }
     }
 }
