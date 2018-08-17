@@ -10,3 +10,4 @@ namespace FizzBuzz.Core
       }
     }
 }
+
