@@ -8,7 +8,7 @@ namespace FizzBuzz.Test
     public class ParserTests
     {
         public const string FIZZ= "Fizz";
-        public const string FUZZ = "Fuzz";
+        public const string BUZZ = "Buzz";
 
         private readonly IFizzBuzzParser sut;
         
@@ -28,10 +28,10 @@ namespace FizzBuzz.Test
             var expected = str;
 
             // act
-            var acutal = sut.Parse(n);
+            var actual = sut.Parse(n);
 
             // assert
-            Assert.Equal(expected, acutal);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
@@ -42,8 +42,8 @@ namespace FizzBuzz.Test
         public void Parse_MultipleOf3_ReturnFizz(int n)
         {
             var expected = FIZZ;
-            var acutal = sut.Parse(n);
-            Assert.Equal(expected, acutal);
+            var actual = sut.Parse(n);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
@@ -53,9 +53,9 @@ namespace FizzBuzz.Test
         [InlineData(130)]
         public void Parse_MultipleOf5_ReturnFuzz(int n)
         {
-            var expected = FUZZ;
-            var acutal = sut.Parse(n);
-            Assert.Equal(expected, acutal);
+            var expected = BUZZ;
+            var actual = sut.Parse(n);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
@@ -64,9 +64,9 @@ namespace FizzBuzz.Test
         [InlineData(90)]
         public void Parse_MultipleOf3And5_ReturnFuzz(int n)
         {
-            var expected = FIZZ+FUZZ;
-            var acutal = sut.Parse(n);
-            Assert.Equal(expected, acutal);
+            var expected = FIZZ+BUZZ;
+            var actual = sut.Parse(n);
+            Assert.Equal(expected, actual);
         }
     }
 }
